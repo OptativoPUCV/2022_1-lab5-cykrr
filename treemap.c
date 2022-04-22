@@ -98,6 +98,7 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
     }
 
     this->current = i;
+    if(i != NULL)
     printf("!!Found key: %d\n", *(int*)(i->pair->key));
     if(!i) return NULL;
     else return i->pair;

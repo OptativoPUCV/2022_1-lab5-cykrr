@@ -46,7 +46,44 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 }
 
 
-void insertTreeMap(TreeMap * tree, void* key, void * value) {
+void insertTreeMap(TreeMap * this, void* key, void * value) {
+    Pair *pair = createTreeNode(key, value);
+    if(!this || !key) return NULL;
+    TreeNode *i = this->root;
+    /*
+    if(this == NULL ||
+        this->root == NULL || 
+        this->root->pair == NULL || 
+        this->root->pair->key == NULL ||
+        key == NULL) return NULL;
+    */
+    
+    int j = 0;
+    while(i) { 
+        if(is_equal(this, i->pair->key, key)) break;
+        if(this->lower_than(key, i->pair->key)) {
+            i=i->left;
+        } else {
+           i = i->right;
+        }
+
+
+        if(j >= 100) {
+            printf("!!!! Tiempo de ejecucion excedido\n");
+            exit(1);
+        }
+        j++;
+    }
+
+    this->current = i;
+    if(i != NULL)
+        printf("!!Found key: %d\n", *(int*)(i->pair->key));
+    else 
+        printf("!! Found nothing.. \n");
+
+    if(i == NULL) return NULL;
+    else return i->pair;
+
 
 }
 

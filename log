@@ -158,3 +158,35 @@ vi., 22 de abr. de 2022 12:01:44:
  tests:  11|6
 total_score: 15/70
 8aa7488
+vi., 22 de abr. de 2022 12:07:24: 
+ treemap.c | 39 ++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 38 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function 'insertTreeMap':
+treemap.c:50:18: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+     Pair *pair = createTreeNode(key, value);
+                  ^~~~~~~~~~~~~~
+treemap.c:51:30: error: 'return' with a value, in function returning void [-Werror]
+     if(!this || !key) return NULL;
+                              ^~~~
+treemap.c:49:6: note: declared here
+ void insertTreeMap(TreeMap * this, void* key, void * value) {
+      ^~~~~~~~~~~~~
+treemap.c:84:26: error: 'return' with a value, in function returning void [-Werror]
+     if(i == NULL) return NULL;
+                          ^~~~
+treemap.c:49:6: note: declared here
+ void insertTreeMap(TreeMap * this, void* key, void * value) {
+      ^~~~~~~~~~~~~
+treemap.c:85:18: error: 'return' with a value, in function returning void [-Werror]
+     else return i->pair;
+                 ~^~~~~~
+treemap.c:49:6: note: declared here
+ void insertTreeMap(TreeMap * this, void* key, void * value) {
+      ^~~~~~~~~~~~~
+treemap.c:50:11: error: unused variable 'pair' [-Werror=unused-variable]
+     Pair *pair = createTreeNode(key, value);
+           ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+b546ec2

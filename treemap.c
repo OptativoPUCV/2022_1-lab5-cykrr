@@ -80,8 +80,16 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
         this->root->pair->key == NULL ||
         key == NULL) return NULL;
     
+    int j = 0;
     while(i) { 
         if(is_equal(this, i->pair->key, key)) break;
+        if(j >= 100) {
+            printf("!!!! Tiempo de ejecucion excedido\n");
+            exit(1);
+        }
+        
+        
+        j++;
     }
 
     this->current = i;

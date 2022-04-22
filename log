@@ -75,3 +75,14 @@ vi., 22 de abr. de 2022 11:50:32:
  1 file changed, 3 insertions(+)
  tests:  0|0
 169370b
+vi., 22 de abr. de 2022 11:51:33: 
+ treemap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ tests:  5|0
+5d7bb1b
+vi., 22 de abr. de 2022 11:51:50: 
+ treemap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  5|0
+!!!! Tiempo de ejecucion excedido
+5d7bb1b

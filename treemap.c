@@ -80,6 +80,9 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
         this->root->pair->key == NULL ||
         key == NULL) return NULL;
     
+    while(i) { 
+        if(is_equal(this, i->pair->key, key)) break;
+    }
 
     this->current = i;
     if(!i) return NULL;

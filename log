@@ -117,3 +117,8 @@ treemap.c:101:5: error: invalid use of void expression
 cc1.exe: all warnings being treated as errors
 Compilation failed
 16aeae4
+vi., 22 de abr. de 2022 11:55:26: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+7ba038a

@@ -85,7 +85,7 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
         if(is_equal(this, i->pair->key, key)) break;
         if(this->lower_than(i->pair->key, key)) {
             i=i->left;
-        } else {
+        } else if(!this->lower_than(i->pair->key, key)) {
            i = i->right;
         }
 

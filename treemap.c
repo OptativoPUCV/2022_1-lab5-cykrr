@@ -64,15 +64,14 @@ void insertTreeMap(TreeMap * this, void* key, void * value) {
             return;
         } else if(i->left == NULL && i->right) {
             i->left = new;
+            break;
         } else if(i->right == NULL && i->left) {
             i->right = new;
+            break;
         } else {
             i->left = new;
+            break;
         }
-        this->current = new;
-
-        }
-        
        
 
 
@@ -83,16 +82,7 @@ void insertTreeMap(TreeMap * this, void* key, void * value) {
         j++;
     }
 
-    this->current = i;
-    if(i != NULL)
-        printf("!!Found key: %d\n", *(int*)(i->pair->key));
-    else 
-        printf("!! Found nothing.. \n");
-
-    if(i == NULL) return NULL;
-    else return i->pair;
-
-
+    this->current = new;
 }
 
 TreeNode * minimum(TreeNode * x){

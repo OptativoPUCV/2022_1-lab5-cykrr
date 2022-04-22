@@ -73,13 +73,15 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 
 Pair * searchTreeMap(TreeMap * this, void* key) {
-    if(!this) return NULL;
+    if(!this || !key) return NULL;
     TreeNode *i = this->root;
+    /*
     if(this == NULL ||
         this->root == NULL || 
         this->root->pair == NULL || 
         this->root->pair->key == NULL ||
         key == NULL) return NULL;
+    */
     
     int j = 0;
     while(i) { 

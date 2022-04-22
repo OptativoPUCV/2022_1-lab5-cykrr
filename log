@@ -86,3 +86,9 @@ vi., 22 de abr. de 2022 11:51:50:
  tests:  5|0
 !!!! Tiempo de ejecucion excedido
 5d7bb1b
+vi., 22 de abr. de 2022 11:52:49: 
+ treemap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ tests:  6|7
+total_score: 5/70
+19ca91b

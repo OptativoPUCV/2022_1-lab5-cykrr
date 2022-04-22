@@ -103,3 +103,17 @@ treemap.c:101:27: error: format '%d' expects argument of type 'int', but argumen
 cc1.exe: all warnings being treated as errors
 Compilation failed
 b413910
+vi., 22 de abr. de 2022 11:54:53: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function 'searchTreeMap':
+treemap.c:101:33: error: dereferencing 'void *' pointer [-Werror]
+     printf("!!Found key: %d\n", *i->pair->key);
+                                 ^~~~~~~~~~~~~
+treemap.c:101:5: error: invalid use of void expression
+     printf("!!Found key: %d\n", *i->pair->key);
+     ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+16aeae4

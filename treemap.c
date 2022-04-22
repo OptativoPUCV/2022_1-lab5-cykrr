@@ -80,16 +80,7 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
         this->root->pair->key == NULL ||
         key == NULL) return NULL;
     
-    int j = 0;
-    while(i != NULL || !is_equal(this, i->pair->key,key)) {
-        if(i == NULL) break;
-        if(this->lower_than(i->pair->key, key)) {
-            i=i->left;
-        } else if (!this->lower_than(i->pair->key, key)) {
-            i=i->right;
-        }
-        printf("!!!j: %d\n", j);
-    }
+
     this->current = i;
     if(!i) return NULL;
     else return i->pair;

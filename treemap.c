@@ -86,7 +86,7 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
     int j = 0;
     while(i) { 
         if(is_equal(this, i->pair->key, key)) break;
-        if(this->lower_than(i->pair->key, key)) {
+        if(this->lower_than(key, i->pair->key)) {
             i=i->left;
         } else {
            i = i->right;
@@ -106,7 +106,7 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
     else 
         printf("!! Found nothing.. \n");
 
-    if(!i) return NULL;
+    if(i == NULL) return NULL;
     else return i->pair;
 }
 

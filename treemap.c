@@ -82,12 +82,12 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
     
     int j = 0;
     while(i != NULL || !is_equal(this, i->pair->key,key)) {
+        if(i == NULL) break;
         if(this->lower_than(i->pair->key, key)) {
             i=i->left;
         } else if (!this->lower_than(i->pair->key, key)) {
             i=i->right;
         }
-        j++;
         printf("!!!j: %d\n", j);
     }
     this->current = i;

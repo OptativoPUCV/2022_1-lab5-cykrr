@@ -611,3 +611,9 @@ dom 24 abr 2022 06:43:23 -04:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 348eb3e
+dom 24 abr 2022 06:43:45 -04: 
+ treemap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  19|3
+total_score: 40/70
+0ac7cfe

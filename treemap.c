@@ -186,10 +186,12 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    if(tree->lower_than(tree->current->left, tree->current->right)){
-    tree->current = tree->current->left;
-    } else {
-        tree->current = tree->current->right;
+    if(tree->current->left && tree->current->right){
+        if(tree->lower_than(tree->current->left, tree->current->right)){
+        tree->current = tree->current->left;
+        } else {
+            tree->current = tree->current->right;
+        }
     }
     return NULL;
 }

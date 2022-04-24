@@ -64,6 +64,10 @@ void insertTreeMap(TreeMap * this, void* key, void * value) {
             return;
         }        
 
+        if(this->lower_than(key, i->pair->key)) {
+            i = i->left;
+        }
+
 
         if(j >= 100) {
             printf("!!!! Tiempo de ejecucion excedido\n");

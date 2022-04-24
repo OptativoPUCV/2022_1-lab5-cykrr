@@ -198,6 +198,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     if(tree->current->right && tree->lower_than(tree->current->right, tree->current)){
         tree->current=tree->current->right;
     }
+    printf("current: %d\n", *((int*)tree->current->pair->key));
         
     return tree->current->pair;
 }

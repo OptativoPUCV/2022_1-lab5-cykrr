@@ -207,7 +207,6 @@ Pair * upperBound(TreeMap * tree, void* key) {
             } 
             else {
                 prev = aux;
-                aux = NULL;
             } 
         }
 

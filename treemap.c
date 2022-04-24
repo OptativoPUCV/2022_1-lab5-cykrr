@@ -115,8 +115,8 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         free(node);
     } else if(count == 2) {
         TreeNode *bigger = maximum(node->left);
-        removeNode(tree, bigger);
         node->pair = bigger->pair;
+        removeNode(tree, bigger);
     }
 }
 

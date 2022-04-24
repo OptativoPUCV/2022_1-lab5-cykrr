@@ -207,10 +207,10 @@ Pair * upperBound(TreeMap * tree, void* key) {
 
 
     }
-    if(!tree->current) {
+    if(!aux) {
         return prev->pair;
     } 
-    return tree->current->pair;
+    return aux->pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {

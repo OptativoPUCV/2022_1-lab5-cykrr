@@ -64,8 +64,13 @@ void insertTreeMap(TreeMap * this, void* key, void * value) {
             return;
         }        
 
-        if(this->lower_than(key, i->pair->key)) {
-            i = i->left;
+        if(this->lower_than(key, i->pair->key))  {
+            if(i->left) {
+                i=i->left;
+            } else {
+                i->left = new;
+            }
+
         }
 
 

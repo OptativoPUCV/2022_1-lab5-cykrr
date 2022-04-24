@@ -190,6 +190,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = minimum(tree->current->right);
     } else {
         tree->current = maximum(tree->current);
+        printf("~Curr: %d", *(int*)(tree->current->pair->key));
     }
 
     putchar('\n');

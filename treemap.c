@@ -192,12 +192,9 @@ Pair * nextTreeMap(TreeMap * tree) {
     printf("  \\_R %d\n", *((int*)tree->root->left->right->pair->key));
     printf("\\_R %d\n", *((int*)tree->root->right->pair->key));
     printf("  \\_L %d\n", *((int*)tree->root->right->left->pair->key));
-    if(tree->current->left && tree->current->right){
-        if(tree->lower_than(tree->current->left, tree->current->right)){
-        tree->current = tree->current->left;
-        } else {
-            tree->current = tree->current->right;
-        }
+    if(tree->lower_than(tree->current->left, tree->current)){
+        tree->current=tree->current->left;
     }
-    return NULL;
+        
+    return tree->current->pair;
 }

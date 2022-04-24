@@ -539,3 +539,9 @@ treemap.c:93:6: nota: previous definition of ‘removeNode’ with type ‘void(
 cc1: todos los avisos se tratan como errores
 Compilation failed
 30afdf7
+dom 24 abr 2022 06:13:41 -04: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|4
+total_score: 35/70
+6441455

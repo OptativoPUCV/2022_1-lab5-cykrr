@@ -1065,3 +1065,14 @@ dom 24 abr 2022 08:39:28 -04:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 dec1bc8
+dom 24 abr 2022 08:40:45 -04: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘upperBound’:
+treemap.c:198:19: error: variable ‘next’ sin usar [-Werror=unused-variable]
+  198 |         TreeNode *next = nextTreeMapNode(tree);
+      |                   ^~~~
+cc1: todos los avisos se tratan como errores
+Compilation failed
+5f8d41c

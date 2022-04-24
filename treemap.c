@@ -187,10 +187,9 @@ Pair * upperBound(TreeMap * tree, void* key) {
     tree->current = searchTreeMapNode(tree, key);
     if(!tree->current) {
         tree->current = maximum(tree->root);
-        while(!tree->lower_than(tree->current->pair->key, key)){
+        while(tree->lower_than(tree->current->pair->key, key)){
             nextTreeMap(tree);
         }
-        return tree->current->pair;
     }
         
     return tree->current->pair;

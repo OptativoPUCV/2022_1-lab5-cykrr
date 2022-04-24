@@ -85,7 +85,7 @@ TreeNode * minimum(TreeNode * x){
 }
 
 TreeNode * maximum(TreeNode *x) {
-    if(x->right ){
+    if(x){
         while(x->right) x = x->right;
     }
     return x;

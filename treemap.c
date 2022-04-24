@@ -189,6 +189,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     printf("current: %d\n", *((int*)tree->current->pair->key));
     printf("%d\n", *((int*)tree->root->pair->key));
     printf("\\_L %d\n", *((int*)tree->root->left->pair->key));
+    printf("  \\_L %d\n", *((int*)tree->root->left->left->pair->key));
+    printf("  \\_R %d\n", *((int*)tree->root->left->right->pair->key));
     printf("\\_R %d\n", *((int*)tree->root->right->pair->key));
     printf("  \\_L %d\n", *((int*)tree->root->right->left->pair->key));
     if(tree->current->left && tree->current->right){

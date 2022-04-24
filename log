@@ -1098,3 +1098,8 @@ treemap.c:188:15: error: se define la variable ‘prev’ pero no se usa [-Werro
 cc1: todos los avisos se tratan como errores
 Compilation failed
 c86e68e
+dom 24 abr 2022 08:48:50 -04: 
+ treemap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+ tests:  0|0
+1e5cfc0

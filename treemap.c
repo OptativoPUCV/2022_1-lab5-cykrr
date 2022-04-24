@@ -191,6 +191,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     } else {
         while(tree->current->parent && tree->current->parent->right == tree->current)
             tree->current = tree->current->parent;
+        if(tree->current->parent) tree->current = tree->current->parent;
+
 
     }
 

@@ -219,5 +219,7 @@ TreeNode * nextTreeMapNode(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap *tree) {
-    return nextTreeMapNode(tree)->pair;
+    TreeNode *aux = nextTreeMapNode(tree);
+    if(aux) return aux->pair;
+    else return NULL:
 }

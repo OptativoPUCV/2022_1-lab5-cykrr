@@ -1050,3 +1050,13 @@ dom 24 abr 2022 08:38:55 -04:
  1 file changed, 6 insertions(+), 2 deletions(-)
  tests:  0|0
 133d1b4
+dom 24 abr 2022 08:39:25 -04: 
+ treemap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘nextTreeMap’:
+treemap.c:224:21: error: expected ‘;’ before ‘:’ token
+  224 |     else return NULL:
+      |                     ^
+Compilation failed
+95806e2

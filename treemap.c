@@ -192,6 +192,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
             while(aux->parent && aux->parent->right == aux)
                 aux = aux->parent;
             if(aux->parent) aux = aux->parent;
+            else return NULL;
         }
     }
     return aux->pair;

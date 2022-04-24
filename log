@@ -876,3 +876,14 @@ dom 24 abr 2022 07:45:40 -04:
  1 file changed, 3 insertions(+), 1 deletion(-)
  tests:  0|0
 ac37300
+dom 24 abr 2022 07:47:15 -04: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘upperBound’:
+treemap.c:192:1: error: el control alcanza el final de una función que no es void [-Werror=return-type]
+  192 | }
+      | ^
+cc1: todos los avisos se tratan como errores
+Compilation failed
+6096303

@@ -186,16 +186,9 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    printf("current: %d\n", *((int*)tree->current->pair->key));
-    printf("%d\n", *((int*)tree->root->pair->key));
-    printf("\\_L %d\n", *((int*)tree->root->left->pair->key));
-    if(tree->current->left && tree->lower_than(tree->current, tree->current->left)){
-        tree->current=tree->current->left;
+    if(tree->current->right) {
+        tree->current = minimum(tree->current->right);
     }
-    if(tree->current->right && tree->lower_than(tree->current, tree->current->right)){
-        tree->current=tree->current->right;
-    }
-    printf("current: %d\n", *((int*)tree->current->pair->key));
         
     return tree->current->pair;
 }

@@ -218,6 +218,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         printf("NOAUX\n");
         return prev->pair;
     } 
+        printf("AUX\n");
     return aux->pair;
 }
 

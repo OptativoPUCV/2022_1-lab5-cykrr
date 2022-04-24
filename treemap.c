@@ -184,8 +184,8 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    tree->current = tree->root;
     int j = 0;
+    TreeNode *prev = tree->root;
     while(tree->current) {
         if (j > 100) {
             printf("Limite excedido\n");
@@ -195,7 +195,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
         if(tree->lower_than(key, tree->current->pair->key)) {
             break;
         }
-        TreeNode *next = nextTreeMapNode(tree);
+        nextTreeMapNode(tree);
+        if(!tree->current) {
+            return tree->current->pair;
+        } else 
+            prev = tree->current;
 
     }
     return tree->current->pair;

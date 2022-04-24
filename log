@@ -1076,3 +1076,14 @@ treemap.c:198:19: error: variable ‘next’ sin usar [-Werror=unused-variable]
 cc1: todos los avisos se tratan como errores
 Compilation failed
 5f8d41c
+dom 24 abr 2022 08:44:36 -04: 
+ treemap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘upperBound’:
+treemap.c:188:15: error: se define la variable ‘prev’ pero no se usa [-Werror=unused-but-set-variable]
+  188 |     TreeNode *prev = tree->root;
+      |               ^~~~
+cc1: todos los avisos se tratan como errores
+Compilation failed
+e630cee

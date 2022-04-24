@@ -887,3 +887,9 @@ treemap.c:192:1: error: el control alcanza el final de una función que no es vo
 cc1: todos los avisos se tratan como errores
 Compilation failed
 6096303
+dom 24 abr 2022 07:47:38 -04: 
+ treemap.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+ tests:  25|2
+total_score: 55/70
+b976404

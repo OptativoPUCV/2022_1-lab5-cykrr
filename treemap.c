@@ -221,5 +221,5 @@ TreeNode * nextTreeMapNode(TreeMap * tree) {
 Pair * nextTreeMap(TreeMap *tree) {
     TreeNode *aux = nextTreeMapNode(tree);
     if(aux) return aux->pair;
-    else return NULL:
+    else return NULL;
 }

@@ -189,6 +189,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     if(tree->current->right) {
         tree->current = minimum(tree->current->right);
     } else {
+        tree->current = maximum(tree->current);
     }
 
     putchar('\n');

@@ -114,7 +114,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         child->parent = parent;
         free(node);
     } else if(count == 2) {
-        TreeNode *bigger = maximum(tree->root);
+        TreeNode *bigger = maximum(node);
         printf("bigger %d\n", *((int*)bigger->pair->key));
         printf("root %d\n", *((int*)tree->root->pair->key));
         printf("\\_L %d\n", *((int*)tree->root->left->pair->key));
@@ -186,7 +186,7 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
 Pair * upperBound(TreeMap * tree, void* key) {
     TreeNode *aux = tree->root;
     TreeNode *prev = tree->root;
-    while(1) {
+    while(aux) {
         if(is_equal(tree, key, aux->pair->key)) break;
         if(tree->lower_than(key, aux->pair->key)) {
             break;
@@ -207,6 +207,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
             } 
             else {
                 prev = aux;
+                aux = NULL;
             } 
         }
 
@@ -217,7 +218,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         printf("NOAUX\n");
         return prev->pair;
     } 
-        printf("AUX\n");
+        printf("NOAUX\n");
     return aux->pair;
 }
 

@@ -1222,3 +1222,14 @@ dom 24 abr 2022 09:09:46 -04:
  tests:  27|2
 total_score: 60/70
 d0474a1
+dom 24 abr 2022 09:15:13 -04: 
+ treemap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘upperBound’:
+treemap.c:188:15: error: se define la variable ‘prev’ pero no se usa [-Werror=unused-but-set-variable]
+  188 |     TreeNode *prev = tree->root;
+      |               ^~~~
+cc1: todos los avisos se tratan como errores
+Compilation failed
+169d900

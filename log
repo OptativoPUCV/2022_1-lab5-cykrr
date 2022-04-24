@@ -860,3 +860,8 @@ dom 24 abr 2022 07:40:23 -04:
  1 file changed, 8 insertions(+), 8 deletions(-)
  tests:  0|0
 11c12d8
+dom 24 abr 2022 07:41:32 -04: 
+ treemap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ tests:  0|0
+d654013

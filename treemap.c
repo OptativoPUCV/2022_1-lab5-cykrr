@@ -176,7 +176,10 @@ TreeNode *searchTreeMapNode(TreeMap* this, void *key) {
 }
 
 Pair * searchTreeMap(TreeMap * this, void* key) {
-    return searchTreeMapNode(this, key)->pair;
+    TreeNode *aux = searchTreeMapNode(this, key);
+
+    if(aux) return aux->pair;
+    else return NULL;
 }
 
 

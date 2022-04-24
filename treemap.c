@@ -3,21 +3,6 @@
 #include <string.h>
 #include "treemap.h"
 
-typedef struct TreeNode TreeNode;
-
-
-struct TreeNode {
-    Pair* pair;
-    TreeNode * left;
-    TreeNode * right;
-    TreeNode * parent;
-};
-
-struct TreeMap {
-    TreeNode * root;
-    TreeNode * current;
-    int (*lower_than) (void* key1, void* key2);
-};
 
 int is_equal(TreeMap* tree, void* key1, void* key2){
     if(tree->lower_than(key1,key2)==0 &&  
@@ -99,6 +84,11 @@ TreeNode * minimum(TreeNode * x){
     return x;
 }
 
+TreeNode * maximum(TreeNode *x) {
+    while(x->right) x = x->right;
+    return x;
+}
+
 
 void removeNode(TreeMap * tree, TreeNode* node) {
     TreeNode *parent = node->parent;
@@ -111,6 +101,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         } else if(parent->right == node){
             parent->right = NULL;
         }
+        free(node);
     } else if(count == 1) {
         TreeNode * child;
         if(node->left) child = node->left;
@@ -121,9 +112,12 @@ void removeNode(TreeMap * tree, TreeNode* node) {
             parent->right = child;
         }
         child->parent = parent;
-            
+        free(node);
+    } else if(count == 2) {
+        TreeNode *bigger = maximum(node->left);
+        removeNode(tree, bigger);
+        node->pair = bigger->pair;
     }
-    free(node);
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){

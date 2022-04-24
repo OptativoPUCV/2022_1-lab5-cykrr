@@ -185,7 +185,8 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
 
 Pair * upperBound(TreeMap * tree, void* key) {
     TreeNode *aux = searchTreeMapNode(tree, key);
-    return aux->pair;
+    if(aux) return aux->pair;
+    else return NULL;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {

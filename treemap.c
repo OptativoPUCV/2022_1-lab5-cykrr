@@ -188,11 +188,11 @@ Pair * firstTreeMap(TreeMap * tree) {
 Pair * nextTreeMap(TreeMap * tree) {
     if(tree->current->right) {
         tree->current = minimum(tree->current->right);
-    } else if (!tree->current->right) {
+    } else {
+        if(!tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key)) 
+            return NULL;
         while(tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key))
             tree->current = tree->current->parent;
-    } else {
-        return NULL;
     }
 
     putchar('\n');

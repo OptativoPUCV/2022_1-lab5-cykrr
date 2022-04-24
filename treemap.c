@@ -117,9 +117,9 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         TreeNode *bigger = maximum(node->right);
         printf("root %d\n", *((int*)tree->root->pair->key));
         printf("\\_L %d\n", *((int*)tree->root->left->pair->key));
+        printf("  \\_L %d\n", *((int*)tree->root->left->left->pair->key));
         printf("\\_R %d\n", *((int*)tree->root->right->pair->key));
         printf("  \\_L %d\n", *((int*)tree->root->right->left->pair->key));
-        printf("  \\_R %d\n", *((int*)tree->root->right->right->pair->key));
         node->pair = bigger->pair;
         removeNode(tree, bigger);
     }

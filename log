@@ -521,3 +521,21 @@ dom 24 abr 2022 06:13:19 -04:
  tests:  17|4
 total_score: 35/70
 125a6ab
+dom 24 abr 2022 06:13:34 -04: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘removeNode’:
+treemap.c:123:35: error: nombre de tipo ‘USES’ desconocido
+  123 |         node->pair = bigger->pair;USES
+      |                                   ^~~~
+treemap.c:124:9: error: nombres de parámetros (sin tipos) en la declaración de la función [-Werror]
+  124 |         removeNode(tree, bigger);
+      |         ^~~~~~~~~~
+treemap.c:124:9: error: conflicting types for ‘removeNode’; have ‘int()’
+treemap.c:93:6: nota: previous definition of ‘removeNode’ with type ‘void(TreeMap *, TreeNode *)’
+   93 | void removeNode(TreeMap * tree, TreeNode* node) {
+      |      ^~~~~~~~~~
+cc1: todos los avisos se tratan como errores
+Compilation failed
+30afdf7

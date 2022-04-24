@@ -326,3 +326,9 @@ treemap.c:73:17: error: ‘current’ no se declaró aquí (primer uso en esta f
 treemap.c:73:17: nota: cada identificador sin declarar se reporta sólo una vez para cada función en el que aparece
 Compilation failed
 253452f
+dom 24 abr 2022 05:22:01 -04: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|6
+total_score: 15/70
+10fe4d7

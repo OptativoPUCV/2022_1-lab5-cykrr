@@ -196,7 +196,8 @@ Pair * upperBound(TreeMap * tree, void* key) {
             break;
         }
 
-        if(nextTreeMapNode(tree))
+        nextTreeMapNode(tree);
+        if(tree->current)
             prev = tree->current;
 
 

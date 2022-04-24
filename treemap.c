@@ -137,7 +137,7 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 
 
-Pair * searchTreeMap(TreeMap * this, void* key) {
+TreeNode *searchTreeMapNode(TreeMap* this, void *key) {
     if(!this || !key) return NULL;
     TreeNode *i = this->root;
     /*
@@ -172,12 +172,17 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
         printf("!! Found nothing.. \n");
 
     if(i == NULL) return NULL;
-    else return i->pair;
+    else return i;
+}
+
+Pair * searchTreeMap(TreeMap * this, void* key) {
+    return searchTreeMapNode(this, key)->pair;
 }
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+    TreeNode *aux = searchTreeMapNode(tree, key);
+    return aux->pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
@@ -193,11 +198,6 @@ Pair * nextTreeMap(TreeMap * tree) {
             tree->current = tree->current->parent;
         if(tree->current->parent) tree->current = tree->current->parent;
         else return NULL;
-
-
     }
-
-    putchar('\n');
-        
     return tree->current->pair;
 }

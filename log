@@ -629,3 +629,24 @@ dom 24 abr 2022 06:44:19 -04:
  tests:  19|3
 total_score: 40/70
 d708e39
+dom 24 abr 2022 06:44:53 -04: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘nextTreeMap’:
+treemap.c:189:62: error: expected ‘)’ before ‘;’ token
+  189 |     printf("current: %d\n", *((int*)tree->current->pair->key);
+      |           ~                                                  ^
+      |                                                              )
+treemap.c:201:17: error: expected ‘;’ before ‘}’ token
+  201 |     return NULL;
+      |                 ^
+      |                 ;
+  202 | }
+      | ~                
+treemap.c:202:1: error: el control alcanza el final de una función que no es void [-Werror=return-type]
+  202 | }
+      | ^
+cc1: todos los avisos se tratan como errores
+Compilation failed
+bae86c0

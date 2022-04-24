@@ -1124,3 +1124,9 @@ treemap.c:206:16: error: se devuelve ‘TreeNode *’ desde una función con tip
 cc1: todos los avisos se tratan como errores
 Compilation failed
 8dce93a
+dom 24 abr 2022 08:50:50 -04: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  24|2
+total_score: 55/70
+eee6d4b

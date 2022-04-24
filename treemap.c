@@ -85,9 +85,7 @@ TreeNode * minimum(TreeNode * x){
 }
 
 TreeNode * maximum(TreeNode *x) {
-    if(x){
-        while(x->right) x = x->right;
-    }
+    while(x->right) x = x->right;
     return x;
 }
 
@@ -116,8 +114,12 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         child->parent = parent;
         free(node);
     } else if(count == 2) {
-        TreeNode *bigger = maximum(node->right->right);
+        TreeNode *bigger = maximum(node);
         printf("bigger %d\n", *((int*)bigger->pair->key));
+        printf("root %d\n", *((int*)tree->root->pair->key));
+        printf("\\_L %d\n", *((int*)tree->root->left->pair->key));
+        printf("\\_R %d\n", *((int*)tree->root->right->pair->key));
+        printf("  \\_L %d\n", *((int*)tree->root->right->left->pair->key));
         node->pair = bigger->pair;
         removeNode(tree, bigger);
     }

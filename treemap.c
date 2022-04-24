@@ -198,8 +198,9 @@ Pair * upperBound(TreeMap * tree, void* key) {
         nextTreeMapNode(tree);
         if(!tree->current) {
             return tree->current->pair;
-        } else 
+        } else {
             prev = tree->current;
+        }
 
     }
     return tree->current->pair;

@@ -187,7 +187,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     TreeNode *aux = tree->root;
     while(aux) {
         if(aux->right)
-            aux = maximum(tree->current->right);
+            aux = maximum(aux->right);
         else {
             while(aux->parent && aux->parent->right == aux)
                 aux = aux->parent;

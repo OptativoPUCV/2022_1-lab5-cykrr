@@ -291,3 +291,9 @@ dom 24 abr 2022 04:40:08 -04:
  tests:  11|6
 total_score: 15/70
 1d7e53d
+dom 24 abr 2022 04:50:09 -04: 
+ treemap.c | 9 ---------
+ 1 file changed, 9 deletions(-)
+ tests:  10|0
+!!!! Tiempo de ejecucion excedido
+aa0528b

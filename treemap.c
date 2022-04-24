@@ -62,17 +62,7 @@ void insertTreeMap(TreeMap * this, void* key, void * value) {
     while(i) { 
         if(is_equal(this, key, i->pair->key)) {
             return;
-        } else if(i->left == NULL && i->right) {
-            i->left = new;
-            break;
-        } else if(i->right == NULL && i->left) {
-            i->right = new;
-            break;
-        } else {
-            i->left = new;
-            break;
-        }
-       
+        }        
 
 
         if(j >= 100) {

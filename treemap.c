@@ -203,7 +203,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
 
     }
     if(!tree->current) {
-        return prev->pair;
+        return prev;
     } 
     return tree->current->pair;
 }

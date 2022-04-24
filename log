@@ -1113,3 +1113,14 @@ dom 24 abr 2022 08:50:15 -04:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 064ec50
+dom 24 abr 2022 08:50:40 -04: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘upperBound’:
+treemap.c:206:16: error: se devuelve ‘TreeNode *’ desde una función con tipo de devolución ‘Pair *’ incompatible [-Werror=incompatible-pointer-types]
+  206 |         return prev;
+      |                ^~~~
+cc1: todos los avisos se tratan como errores
+Compilation failed
+8dce93a

@@ -184,7 +184,6 @@ Pair * searchTreeMap(TreeMap * this, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    int j = 0;
     TreeNode *prev = NULL;
     while(tree->current) {
         if(is_equal(tree, key, tree->current->pair->key)) break;

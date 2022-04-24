@@ -315,3 +315,14 @@ dom 24 abr 2022 05:21:42 -04:
  tests:  12|6
 total_score: 15/70
 374066a
+dom 24 abr 2022 05:21:53 -04: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘insertTreeMap’:
+treemap.c:73:17: error: ‘current’ no se declaró aquí (primer uso en esta función)
+   73 |                 current = i;
+      |                 ^~~~~~~
+treemap.c:73:17: nota: cada identificador sin declarar se reporta sólo una vez para cada función en el que aparece
+Compilation failed
+253452f

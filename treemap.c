@@ -70,6 +70,7 @@ void insertTreeMap(TreeMap * this, void* key, void * value) {
             } else {
                 i->left = new;
                 new->parent = i;
+                current = i;
             }
 
         }

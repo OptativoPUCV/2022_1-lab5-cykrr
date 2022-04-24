@@ -192,6 +192,8 @@ Pair * nextTreeMap(TreeMap * tree) {
         while(tree->current->parent)
             tree->current = tree->current->parent;
     }
+
+    putchar('\n');
         
     return tree->current->pair;
 }

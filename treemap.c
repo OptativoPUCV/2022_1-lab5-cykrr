@@ -215,6 +215,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
 
     }
     if(!aux) {
+        printf("NOAUX\n");
         return prev->pair;
     } 
     return aux->pair;

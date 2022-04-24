@@ -1136,3 +1136,14 @@ dom 24 abr 2022 08:51:29 -04:
  tests:  24|2
 total_score: 55/70
 f89c88c
+dom 24 abr 2022 08:51:50 -04: 
+ treemap.c | 8 --------
+ 1 file changed, 8 deletions(-)
+En el fichero incluido desde test.c:4:
+treemap.c: En la función ‘upperBound’:
+treemap.c:187:9: error: variable ‘j’ sin usar [-Werror=unused-variable]
+  187 |     int j = 0;
+      |         ^
+cc1: todos los avisos se tratan como errores
+Compilation failed
+5be686c

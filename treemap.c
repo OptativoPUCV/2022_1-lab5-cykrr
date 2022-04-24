@@ -187,14 +187,6 @@ Pair * upperBound(TreeMap * tree, void* key) {
     int j = 0;
     TreeNode *prev = NULL;
     while(tree->current) {
-        if (j > 100) {
-            printf("Limite excedido\n");
-            exit(1);
-        }
-        nextTreeMapNode(tree);
-        if(tree->current)
-            prev = tree->current;
-
         if(is_equal(tree, key, tree->current->pair->key)) break;
         if(tree->lower_than(key, tree->current->pair->key)) {
             break;

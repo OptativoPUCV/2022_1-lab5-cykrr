@@ -192,13 +192,21 @@ Pair * upperBound(TreeMap * tree, void* key) {
             break;
         }
 
-        if(aux->right)
+        if(aux->right) {
+            prev = aux;
             aux = minimum(aux->right);
+        }
         else {
-            while(aux->parent && aux->parent->right == aux)
+            while(aux->parent && aux->parent->right == aux) {
+                prev = aux;
                 aux = aux->parent;
-            if(aux->parent) aux = aux->parent;
+            }
+            if(aux->parent){
+                prev = aux;
+                aux = aux->parent;
+            } 
             else {
+                prev = aux;
                 aux = NULL;
             } 
         }

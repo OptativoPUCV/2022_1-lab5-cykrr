@@ -195,6 +195,9 @@ Pair * nextTreeMap(TreeMap * tree) {
     if(tree->current->left && tree->lower_than(tree->current->left, tree->current)){
         tree->current=tree->current->left;
     }
+    if(tree->current->right && tree->lower_than(tree->current->right, tree->current)){
+        tree->current=tree->current->right;
+    }
         
     return tree->current->pair;
 }

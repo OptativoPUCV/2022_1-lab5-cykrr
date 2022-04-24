@@ -678,3 +678,9 @@ dom 24 abr 2022 06:48:04 -04:
  tests:  19|3
 total_score: 40/70
 a178a4e
+dom 24 abr 2022 06:48:26 -04: 
+ treemap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+ tests:  19|3
+total_score: 40/70
+fca60cf

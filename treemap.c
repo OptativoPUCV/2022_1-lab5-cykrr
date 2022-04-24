@@ -189,10 +189,10 @@ Pair * nextTreeMap(TreeMap * tree) {
     if(tree->current->right) {
         tree->current = minimum(tree->current->right);
     } else {
-        if(!tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key))  {
+        if(!tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key))  
             return NULL;
-        }
-        tree->current = maximum(tree->current);
+        else 
+            tree->current = maximum(tree->current);
     }
 
     putchar('\n');
